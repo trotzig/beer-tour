@@ -18,9 +18,12 @@ async function getData() {
   });
 
   const values = response.data.values;
-  const players = values.splice(0, 1)[0].slice(1).map(name => {
-    return { name, points: 0 };
-  });
+  const players = values
+    .splice(0, 1)[0]
+    .slice(1)
+    .map(name => {
+      return { name, points: 0 };
+    });
   for (const row of values) {
     let i = 0;
     for (const debt of row.slice(1)) {
@@ -31,14 +34,14 @@ async function getData() {
   const leaderboard = players.sort((a, b) => b.points - a.points);
 
   leaderboard.forEach((entry, i) => {
-    const previous = (leaderboard[i-1] || { points: -1 });
+    const previous = leaderboard[i - 1] || { points: -1 };
     if (previous.points === entry.points) {
       if (!previous.position.startsWith('T')) {
         previous.position = `T${previous.position}`;
       }
       entry.position = previous.position;
     } else {
-      entry.position = `${i+1}`;
+      entry.position = `${i + 1}`;
     }
   });
 
@@ -78,6 +81,14 @@ export default async function Home() {
           })}
         </tbody>
       </table>
+
+      <p className={styles.dataLink}>
+        Uppdatera här:{' '}
+        <a href="https://docs.google.com/spreadsheets/d/1wpLkUl-P-OMEgXE2w98aQ3wbKp62__-TR5wjFxS3zlU/edit?usp=sharing">
+          https://docs.google.com/spreadsheets/d/1wpLkUl-P-OMEgXE2w98aQ3wbKp62__-TR5wjFxS3zlU/edit?usp=sharing
+        </a>
+        .
+      </p>
     </main>
   );
 }
