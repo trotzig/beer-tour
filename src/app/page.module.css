@@ -18,3 +18,12 @@
   margin: 50px 0 100px;
   text-align: center;
 }
+.leaderboard {
+  margin-bottom: 40px;
+}
+.debts {
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  opacity: 0.7;
+}

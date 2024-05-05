@@ -22,12 +22,18 @@ async function getData() {
     .splice(0, 1)[0]
     .slice(1)
     .map(name => {
-      return { name, points: 0 };
+      return { name, points: 0, debtors: [] };
     });
+
   for (const row of values) {
     let i = 0;
+    const name = row[0];
     for (const debt of row.slice(1)) {
-      players[i].points += parseInt(debt, 10);
+      const points = parseInt(debt, 10);
+      if (points > 0) {
+        players[i].points += points;
+        players[i].debtors.push({ name, points });
+      }
       i++;
     }
   }
@@ -45,23 +51,30 @@ async function getData() {
     }
   });
 
-  console.log({ leaderboard, values });
+  const debts = [];
+  for (const entry of leaderboard) {
+    for (const debtor of entry.debtors) {
+      debts.push(`${debtor.name} är skyldig ${entry.name} ${debtor.points} öl`);
+    }
+  }
+
+  console.log({ leaderboard, debts });
 
   return {
     leaderboard,
-    values,
+    debts,
   };
 }
 
 export default async function Home() {
-  const { leaderboard } = await getData();
+  const { leaderboard, debts } = await getData();
   return (
     <main className={styles.main}>
       <div className={styles.beer}>🍺⛳️</div>
       <h1>Öltouren 2024</h1>
       <p>Aktuell ställning i Öltouren på Stockholms Golfklubb.</p>
       <h2>Ledartavla</h2>
-      <table>
+      <table className={styles.leaderboard}>
         <thead>
           <tr>
             <th>Pos</th>
@@ -81,6 +94,13 @@ export default async function Home() {
           })}
         </tbody>
       </table>
+
+      <h2>Skuldtavla</h2>
+      <div className={styles.debts}>
+        {debts.map(debt => {
+          return <div key={debt}>{debt}</div>;
+        })}
+      </div>
 
       <p className={styles.dataLink}>
         Uppdatera här:{' '}
