@@ -108,6 +108,43 @@ a {
   text-decoration: none;
 }
 
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+/* Header row styles */
+table th {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Alternate row styles */
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Cell styles */
+table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Highlight the first column */
+table td:first-child {
+  font-weight: bold;
+}
+table td:last-child, table th:last-child {
+  text-align: center;
+}
+table td:first-child, table th:first-child {
+  text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
