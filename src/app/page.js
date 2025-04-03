@@ -4,7 +4,7 @@ import { google } from 'googleapis';
 
 const { GOOGLE_API_KEY } = process.env;
 
-async function getData() {
+async function getData(sheetName = 'standings') {
   // Initialize the Sheets API client
   const sheets = google.sheets({
     version: 'v4',
@@ -14,7 +14,7 @@ async function getData() {
   // Fetch data from Google Sheets
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId: '1wpLkUl-P-OMEgXE2w98aQ3wbKp62__-TR5wjFxS3zlU',
-    range: 'standings',
+    range: sheetName,
   });
 
   const values = response.data.values;
@@ -58,8 +58,6 @@ async function getData() {
     }
   }
 
-  console.log({ leaderboard, debts });
-
   return {
     leaderboard,
     debts,
@@ -68,10 +66,11 @@ async function getData() {
 
 export default async function Home() {
   const { leaderboard, debts } = await getData();
+  const results2024 = await getData('2024');
   return (
     <main className={styles.main}>
       <div className={styles.beer}>🍺⛳️</div>
-      <h1>Öltouren 2024</h1>
+      <h1>Öltouren 2025</h1>
       <p>Aktuell ställning i Öltouren på Stockholms Golfklubb.</p>
       <h2>Ledartavla</h2>
       <table className={styles.leaderboard}>
@@ -102,6 +101,27 @@ export default async function Home() {
         })}
       </div>
 
+      <h2>Resultat 2024</h2>
+      <table className={styles.leaderboard}>
+        <thead>
+          <tr>
+            <th>Pos</th>
+            <th>Spelare</th>
+            <th>Intjänade öl</th>
+          </tr>
+        </thead>
+        <tbody>
+          {results2024.leaderboard.map(entry => {
+            return (
+              <tr key={entry.name}>
+                <td>{entry.position}</td>
+                <td>{entry.name}</td>
+                <td>{entry.points}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
       <p className={styles.dataLink}>
         Uppdatera här:{' '}
         <a href="https://docs.google.com/spreadsheets/d/1wpLkUl-P-OMEgXE2w98aQ3wbKp62__-TR5wjFxS3zlU/edit?usp=sharing">
