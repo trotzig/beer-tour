@@ -77,9 +77,11 @@ async function getData(sheetName = 'standings') {
 }
 
 export default async function Home() {
-  const { leaderboard, debts } = await getData();
-  const results2025 = await getData('2025');
-  const results2024 = await getData('2024');
+  const [{ leaderboard, debts }, results2025, results2024] = await Promise.all([
+    getData(),
+    getData('2025'),
+    getData('2024'),
+  ]);
   return (
     <main className={styles.main}>
       <div className={styles.hero}>
