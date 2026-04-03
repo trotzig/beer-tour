@@ -36,7 +36,7 @@ function ScrambleCell({ value, loading, number }) {
     return () => clearInterval(intervalRef.current);
   }, [loading, value, number]);
 
-  return <span>{display}</span>;
+  return <span style={{ opacity: loading ? 0.2 : 1 }}>{display}</span>;
 }
 
 const PLACEHOLDER_ROWS = 5;
