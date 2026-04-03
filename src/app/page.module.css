@@ -135,3 +135,25 @@
 .dataLink a {
   color: rgba(255, 255, 255, 0.35);
 }
+
+.refreshButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1.25rem;
+  background-color: transparent;
+  border: 1px solid var(--masters-gold);
+  color: var(--masters-gold);
+  text-decoration: none;
+  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.refreshButton:hover {
+  background-color: var(--masters-gold);
+  color: var(--masters-green);
+  text-decoration: none;
+}

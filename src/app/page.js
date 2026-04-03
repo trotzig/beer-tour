@@ -1,5 +1,6 @@
 import styles from './page.module.css';
 import { google } from 'googleapis';
+import RefreshButton from './RefreshButton';
 
 const { GOOGLE_API_KEY } = process.env;
 
@@ -113,6 +114,7 @@ export default async function Home() {
         </table>
       </div>
       </div>
+      <RefreshButton />
 
       <p className={styles.sectionTitle}>Skulder</p>
       <h2 className={styles.sectionHeading}>Skuldtavla</h2>
