@@ -69,12 +69,14 @@ export default async function Home() {
   const results2024 = await getData('2024');
   return (
     <main className={styles.main}>
-      <div className={styles.header}>
+      <div className={styles.hero}>
         <span className={styles.flagIcon}>⛳️</span>
         <h1 className={styles.title}>Öltouren 2026</h1>
         <p className={styles.subtitle}>Stockholms Golfklubb</p>
       </div>
-      <h2 className={styles.sectionTitle}>Ledartavla</h2>
+
+      <p className={styles.sectionTitle}>Aktuell ställning</p>
+      <h2 className={styles.sectionHeading}>Ledartavla</h2>
       <table className={styles.leaderboard}>
         <thead>
           <tr>
@@ -96,14 +98,16 @@ export default async function Home() {
         </tbody>
       </table>
 
-      <h2 className={styles.sectionTitle}>Skuldtavla</h2>
+      <p className={styles.sectionTitle}>Skulder</p>
+      <h2 className={styles.sectionHeading}>Skuldtavla</h2>
       <div className={styles.debts}>
         {debts.map(debt => {
           return <div key={debt}>{debt}</div>;
         })}
       </div>
 
-      <h2 className={styles.sectionTitle}>Resultat 2025</h2>
+      <p className={styles.sectionTitle}>Historik</p>
+      <h2 className={styles.sectionHeading}>Resultat 2025</h2>
       <table className={styles.leaderboard}>
         <thead>
           <tr>
@@ -125,7 +129,8 @@ export default async function Home() {
         </tbody>
       </table>
 
-      <h2 className={styles.sectionTitle}>Resultat 2024</h2>
+      <p className={styles.sectionTitle}>Historik</p>
+      <h2 className={styles.sectionHeading}>Resultat 2024</h2>
       <table className={styles.leaderboard}>
         <thead>
           <tr>
