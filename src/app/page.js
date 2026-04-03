@@ -51,10 +51,22 @@ async function getData(sheetName = 'standings') {
     }
   });
 
-  const debts = [];
+  // Collect raw debts and net out opposing debts between the same two players
+  const rawDebts = new Map();
   for (const entry of leaderboard) {
     for (const debtor of entry.debtors) {
-      debts.push(`${debtor.name} är skyldig ${entry.name} ${debtor.points} öl`);
+      const key = `${debtor.name}→${entry.name}`;
+      rawDebts.set(key, (rawDebts.get(key) || 0) + debtor.points);
+    }
+  }
+  const debts = [];
+  for (const [key, amount] of rawDebts) {
+    const [debtor, creditor] = key.split('→');
+    const reverseKey = `${creditor}→${debtor}`;
+    const reverseAmount = rawDebts.get(reverseKey) || 0;
+    const net = amount - reverseAmount;
+    if (net > 0) {
+      debts.push(`${debtor} är skyldig ${creditor} ${net} öl`);
     }
   }
 
