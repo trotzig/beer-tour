@@ -82,7 +82,6 @@ export default async function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.hero}>
-        <span className={styles.flagIcon}>⛳️</span>
         <h1 className={styles.title}>Öltouren 2026</h1>
         <p className={styles.subtitle}>Stockholms Golfklubb</p>
       </div>
