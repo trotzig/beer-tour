@@ -1,0 +1,118 @@
+{
+  "leaderboard": [
+    {
+      "name": "Jonas Rehman (a)",
+      "points": 22,
+      "debtors": [
+        {
+          "name": "Henric Trotzig",
+          "points": 2
+        },
+        {
+          "name": "Johan Stål",
+          "points": 6
+        },
+        {
+          "name": "David Josephson",
+          "points": 5
+        },
+        {
+          "name": "Henrik Persson",
+          "points": 9
+        }
+      ],
+      "position": "1"
+    },
+    {
+      "name": "Johan Stål",
+      "points": 16,
+      "debtors": [
+        {
+          "name": "Henric Trotzig",
+          "points": 5
+        },
+        {
+          "name": "David Josephson",
+          "points": 4
+        },
+        {
+          "name": "Jonas Rehman ",
+          "points": 5
+        },
+        {
+          "name": "Henrik Persson",
+          "points": 2
+        }
+      ],
+      "position": "2"
+    },
+    {
+      "name": "David Josephson",
+      "points": 13,
+      "debtors": [
+        {
+          "name": "Henric Trotzig",
+          "points": 2
+        },
+        {
+          "name": "Johan Stål",
+          "points": 1
+        },
+        {
+          "name": "Jonas Rehman ",
+          "points": 5
+        },
+        {
+          "name": "Henrik Persson",
+          "points": 5
+        }
+      ],
+      "position": "3"
+    },
+    {
+      "name": "Henrik Persson",
+      "points": 4,
+      "debtors": [
+        {
+          "name": "David Josephson",
+          "points": 3
+        },
+        {
+          "name": "Jonas Rehman ",
+          "points": 1
+        }
+      ],
+      "position": "4"
+    },
+    {
+      "name": "Henric Trotzig",
+      "points": 3,
+      "debtors": [
+        {
+          "name": "David Josephson",
+          "points": 1
+        },
+        {
+          "name": "Jonas Rehman ",
+          "points": 2
+        }
+      ],
+      "position": "5"
+    }
+  ],
+  "debts": [
+    "Henric Trotzig är skyldig Jonas Rehman (a) 2 öl",
+    "Johan Stål är skyldig Jonas Rehman (a) 6 öl",
+    "David Josephson är skyldig Jonas Rehman (a) 5 öl",
+    "Henrik Persson är skyldig Jonas Rehman (a) 9 öl",
+    "Henric Trotzig är skyldig Johan Stål 5 öl",
+    "David Josephson är skyldig Johan Stål 3 öl",
+    "Jonas Rehman  är skyldig Johan Stål 5 öl",
+    "Henrik Persson är skyldig Johan Stål 2 öl",
+    "Henric Trotzig är skyldig David Josephson 1 öl",
+    "Jonas Rehman  är skyldig David Josephson 5 öl",
+    "Henrik Persson är skyldig David Josephson 2 öl",
+    "Jonas Rehman  är skyldig Henrik Persson 1 öl",
+    "Jonas Rehman  är skyldig Henric Trotzig 2 öl"
+  ]
+}

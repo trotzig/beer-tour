@@ -1,0 +1,122 @@
+{
+  "leaderboard": [
+    {
+      "name": "Johan Stål",
+      "points": 29,
+      "debtors": [
+        {
+          "name": "Henric Trotzig",
+          "points": 6
+        },
+        {
+          "name": "David Josephson",
+          "points": 8
+        },
+        {
+          "name": "Jonas Rehman ",
+          "points": 12
+        },
+        {
+          "name": "Henrik Persson",
+          "points": 3
+        }
+      ],
+      "position": "1"
+    },
+    {
+      "name": "Jonas Rehman (a)",
+      "points": 19,
+      "debtors": [
+        {
+          "name": "Henric Trotzig",
+          "points": 6
+        },
+        {
+          "name": "Johan Stål",
+          "points": 3
+        },
+        {
+          "name": "David Josephson",
+          "points": 7
+        },
+        {
+          "name": "Henrik Persson",
+          "points": 3
+        }
+      ],
+      "position": "2"
+    },
+    {
+      "name": "Henrik Persson",
+      "points": 16,
+      "debtors": [
+        {
+          "name": "David Josephson",
+          "points": 10
+        },
+        {
+          "name": "Jonas Rehman ",
+          "points": 6
+        }
+      ],
+      "position": "3"
+    },
+    {
+      "name": "David Josephson",
+      "points": 11,
+      "debtors": [
+        {
+          "name": "Henric Trotzig",
+          "points": 1
+        },
+        {
+          "name": "Johan Stål",
+          "points": 2
+        },
+        {
+          "name": "Jonas Rehman ",
+          "points": 1
+        },
+        {
+          "name": "Henrik Persson",
+          "points": 7
+        }
+      ],
+      "position": "4"
+    },
+    {
+      "name": "Henric Trotzig",
+      "points": 5,
+      "debtors": [
+        {
+          "name": "Johan Stål",
+          "points": 1
+        },
+        {
+          "name": "David Josephson",
+          "points": 2
+        },
+        {
+          "name": "Jonas Rehman ",
+          "points": 2
+        }
+      ],
+      "position": "5"
+    }
+  ],
+  "debts": [
+    "Henric Trotzig är skyldig Johan Stål 5 öl",
+    "David Josephson är skyldig Johan Stål 6 öl",
+    "Jonas Rehman  är skyldig Johan Stål 12 öl",
+    "Henrik Persson är skyldig Johan Stål 3 öl",
+    "Henric Trotzig är skyldig Jonas Rehman (a) 6 öl",
+    "Johan Stål är skyldig Jonas Rehman (a) 3 öl",
+    "David Josephson är skyldig Jonas Rehman (a) 7 öl",
+    "Henrik Persson är skyldig Jonas Rehman (a) 3 öl",
+    "David Josephson är skyldig Henrik Persson 3 öl",
+    "Jonas Rehman  är skyldig Henrik Persson 6 öl",
+    "Jonas Rehman  är skyldig David Josephson 1 öl",
+    "David Josephson är skyldig Henric Trotzig 1 öl",
+    "Jonas Rehman  är skyldig Henric Trotzig 2 öl"
+  ]
+}
