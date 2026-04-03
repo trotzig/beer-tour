@@ -2,6 +2,10 @@
 
 Next.js app. Uses pnpm and mise (Node 22).
 
+## Setup
+
+In worktrees, run `pnpm install` from the repo root (`/Users/henric/beer-tour`) before starting the dev server, since `node_modules` lives there.
+
 ## Commands
 
 - `pnpm dev` — start dev server on port 3000
