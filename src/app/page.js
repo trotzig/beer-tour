@@ -1,6 +1,8 @@
 import styles from './page.module.css';
 import { google } from 'googleapis';
 import RefreshButton from './RefreshButton';
+import results2024 from '../data/2024.json';
+import results2025 from '../data/2025.json';
 
 const { GOOGLE_API_KEY } = process.env;
 
@@ -77,11 +79,7 @@ async function getData(sheetName = 'standings') {
 }
 
 export default async function Home() {
-  const [{ leaderboard, debts }, results2025, results2024] = await Promise.all([
-    getData(),
-    getData('2025'),
-    getData('2024'),
-  ]);
+  const { leaderboard, debts } = await getData();
   return (
     <main className={styles.main}>
       <div className={styles.hero}>
