@@ -55,9 +55,10 @@ table {
 
 /* Header row */
 table th {
-  background-color: var(--masters-green);
-  color: var(--masters-white);
+  background-color: #e8f0eb;
+  color: var(--masters-green);
   border: none;
+  border-bottom: 2px solid #c0d4c8;
   padding: 10px 14px;
   text-align: left;
   font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
