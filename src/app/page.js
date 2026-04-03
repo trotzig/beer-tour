@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styles from './page.module.css';
 import { google } from 'googleapis';
 
@@ -70,10 +69,12 @@ export default async function Home() {
   const results2024 = await getData('2024');
   return (
     <main className={styles.main}>
-      <div className={styles.beer}>🍺⛳️</div>
-      <h1>Öltouren 2026</h1>
-      <p>Aktuell ställning i Öltouren på Stockholms Golfklubb.</p>
-      <h2>Ledartavla</h2>
+      <div className={styles.header}>
+        <span className={styles.flagIcon}>⛳️</span>
+        <h1 className={styles.title}>Öltouren 2026</h1>
+        <p className={styles.subtitle}>Stockholms Golfklubb</p>
+      </div>
+      <h2 className={styles.sectionTitle}>Ledartavla</h2>
       <table className={styles.leaderboard}>
         <thead>
           <tr>
@@ -95,14 +96,14 @@ export default async function Home() {
         </tbody>
       </table>
 
-      <h2>Skuldtavla</h2>
+      <h2 className={styles.sectionTitle}>Skuldtavla</h2>
       <div className={styles.debts}>
         {debts.map(debt => {
           return <div key={debt}>{debt}</div>;
         })}
       </div>
 
-      <h2>Resultat 2025</h2>
+      <h2 className={styles.sectionTitle}>Resultat 2025</h2>
       <table className={styles.leaderboard}>
         <thead>
           <tr>
@@ -124,7 +125,7 @@ export default async function Home() {
         </tbody>
       </table>
 
-      <h2>Resultat 2024</h2>
+      <h2 className={styles.sectionTitle}>Resultat 2024</h2>
       <table className={styles.leaderboard}>
         <thead>
           <tr>

@@ -2,28 +2,70 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem 30px;
+  padding: 4rem 30px 6rem;
   min-height: 100vh;
   max-width: var(--max-width);
   margin: 0 auto;
 }
 
-.beer {
-  font-size: 100px;
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.flagIcon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.2rem;
+  color: var(--masters-green);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  color: var(--masters-green);
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 2px solid var(--masters-gold);
+  width: 100%;
+}
+
+.leaderboard {
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.debts {
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: #555;
+  font-style: italic;
+  font-size: 0.95rem;
+  width: 100%;
 }
 
 .dataLink {
   font-size: 0.7em;
-  opacity: 0.7;
-  margin: 50px 0 100px;
+  opacity: 0.5;
+  margin: 50px 0 60px;
   text-align: center;
-}
-.leaderboard {
-  margin-bottom: 40px;
-}
-.debts {
-  text-align: center;
-  line-height: 1.5;
-  margin-bottom: 40px;
-  opacity: 0.7;
 }
