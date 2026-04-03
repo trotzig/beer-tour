@@ -75,6 +75,7 @@ export default async function Home() {
         <p className={styles.subtitle}>Stockholms Golfklubb</p>
       </div>
 
+      <div className={styles.scoreboardMount}>
       <div className={styles.scoreboard}>
         <div className={styles.scoreboardHeader}>
           <span className={styles.scoreboardTitle}>Ledartavla</span>
@@ -99,6 +100,7 @@ export default async function Home() {
           })}
         </tbody>
         </table>
+      </div>
       </div>
 
       <p className={styles.sectionTitle}>Skulder</p>

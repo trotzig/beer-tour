@@ -66,14 +66,32 @@
   width: 100%;
 }
 
+/* Outer mount that renders the support beam */
+.scoreboardMount {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.scoreboardMount::after {
+  content: '';
+  display: block;
+  width: 56px;
+  height: 72px;
+  background-color: #0e2b1a;
+  border-radius: 0 0 6px 6px;
+}
+
 /* Physical-scoreboard-style wrapper for the main leaderboard */
 .scoreboard {
   width: 100%;
-  margin-bottom: 2.5rem;
   border-radius: 28px 28px 4px 4px;
   overflow: hidden;
   box-shadow: 0 6px 32px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
   border: 3px solid #0e2b1a;
+  background-color: #ffffff;
 }
 
 .scoreboardHeader {
