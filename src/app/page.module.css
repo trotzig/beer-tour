@@ -24,7 +24,7 @@
 }
 
 .title {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 2.6rem;
   font-weight: 700;
   color: var(--masters-white);
@@ -33,7 +33,7 @@
 }
 
 .subtitle {
-  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Arial Narrow', Arial, sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--masters-gold);
@@ -44,7 +44,7 @@
 
 /* Section label — gold, uppercase, tracked (Masters eyebrow style) */
 .sectionTitle {
-  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Arial Narrow', Arial, sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   color: var(--masters-gold);
@@ -57,7 +57,7 @@
 
 /* Section heading — large Playfair serif, white */
 .sectionHeading {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.8rem;
   font-weight: 400;
   color: var(--masters-white);
@@ -102,7 +102,7 @@
 }
 
 .scoreboardTitle {
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: #0e2b1a;
@@ -143,7 +143,7 @@
   border: 1px solid var(--masters-gold);
   color: var(--masters-gold);
   text-decoration: none;
-  font-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Arial Narrow', Arial, sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.12em;
